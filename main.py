@@ -3,6 +3,7 @@ import uvicorn
 from mylib.logic import search_wiki
 from mylib.logic import wiki as wikilogic
 from mylib.logic import phrase as wikiphrases
+from mylib.logic import geo_wiki as wikigeo
 
 app = FastAPI()
 
@@ -33,6 +34,15 @@ async def phrase(name: str):
     """Retrieve wikipedia page and return phrases"""
 
     result = wikiphrases(name)
+    return {"result": result}
+
+
+@app.get("/geosearch/")
+async def geo_wiki():
+    """Page to search in wikipedia"""
+
+    result = wikigeo()
+    # return 'test'
     return {"result": result}
 
 
