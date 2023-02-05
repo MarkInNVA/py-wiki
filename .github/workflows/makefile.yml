@@ -13,11 +13,11 @@ jobs:
       - name: Install dependencies
         run:
           make install
-      - name: Format with black
+      #- name: Format with black
           #make format
-      - name: Lint with pylint
+      #- name: Lint with pylint
           #make lint
-      - name: Test with pytest
+      #- name: Test with pytest
           #make test
 #   push:
 #     branches: [ "main" ]

@@ -11,7 +11,7 @@ lint:
 test:
 	# test code - pytest
 	python -m pytest -vv test_*.py
-deploy:
+# deploy:
 	# deploy code
 
 all: install #format lint test
