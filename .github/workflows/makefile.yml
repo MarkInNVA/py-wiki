@@ -13,12 +13,15 @@ jobs:
       - name: Install dependencies
         run:
           make install
+      - name: Post Install
+          make post-install    
       - name: Format with black
           make format
       - name: Lint with pylint
           make lint
       - name: Test with pytest
           make test
+
 #   push:
 #     branches: [ "main" ]
 #   pull_request:
