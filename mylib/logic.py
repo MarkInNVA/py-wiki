@@ -24,8 +24,10 @@ def phrase(name):
     return blob.noun_phrases
 
 
-def geo_wiki():
+def geo_wiki(
+    latitude=32.221667, longitude=-110.926389, title=None, results=10, radius=1000
+):
     """geoWikipedia for items in area of interest"""
 
-    result = wikipedia.geosearch(32.221667, -110.926389)
+    result = wikipedia.geosearch(latitude, longitude, title, results, radius)
     return result
